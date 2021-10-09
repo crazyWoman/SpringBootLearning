@@ -1,11 +1,11 @@
-package com.spring.learning.dependency.injection.search;
+package com.spring.learning.dependency.injection.algorithm.search;
 
 import com.spring.learning.dependency.injection.algorithm.SortingAlgorithm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class BinarySearch {
+public class BinarySearchAlgorithm {
     //dependency```````
     @Autowired
     SortingAlgorithm bubbleSort;

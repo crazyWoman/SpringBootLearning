@@ -1,6 +1,6 @@
-package com.spring.learning.dependency.injection;
+package com.spring.learning.dependency.injection.algorithm;
 
-import com.spring.learning.dependency.injection.search.BinarySearch;
+import com.spring.learning.dependency.injection.algorithm.search.BinarySearchAlgorithm;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -13,7 +13,7 @@ public class DependancyStarter {
 
     public static void main(String[] args) {
        ApplicationContext context = SpringApplication.run(DependancyStarter.class);
-        BinarySearch search = context.getBean(BinarySearch.class);
+        BinarySearchAlgorithm search = context.getBean(BinarySearchAlgorithm.class);
        int result = search.search(new int[]{20,5,2,200},2);
         System.out.println(result);
 

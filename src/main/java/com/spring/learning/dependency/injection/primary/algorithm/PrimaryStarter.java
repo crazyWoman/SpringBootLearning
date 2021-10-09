@@ -1,8 +1,6 @@
 package com.spring.learning.dependency.injection.primary.algorithm;
 
-import com.spring.learning.dependency.injection.DependancyStarter;
 import com.spring.learning.dependency.injection.primary.algorithm.search.BinarySearchPrimary;
-import com.spring.learning.dependency.injection.search.BinarySearch;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
