@@ -10,4 +10,11 @@ public class AppConfig {
     public AlbertBean albertBean(){
         return new AlbertBean();
     }
+
+    @Bean(initMethod = "initRhea", destroyMethod = "shutdownRhea")
+
+    public RheaBean rheaBean(){
+        return new RheaBean();
+    }
 }
+

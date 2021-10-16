@@ -1,24 +1,20 @@
 package com.spring.learning.bean.postprocessor;
 
-
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-public class AlbertBean {
-    public AlbertBean() {
-        System.out.println("*******************Albert instance created");
+public class RheaBean {
+    public RheaBean() {
+        System.out.println("*******************RheaBean instance created");
     }
 
-    @PostConstruct
-    private void init() {
+
+    private void initRhea() {
         System.out.println("****************Verifying Resources");
     }
 
-    @PreDestroy
-    private void shutdown() {
+
+    private void shutdownRhea() {
         System.out.println("***************Shutdown All Resources");
     }
-
-
-
 }

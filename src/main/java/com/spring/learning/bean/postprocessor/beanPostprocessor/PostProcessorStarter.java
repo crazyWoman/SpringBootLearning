@@ -1,7 +1,6 @@
-package com.spring.learning.bean.postprocessor;
+package com.spring.learning.bean.postprocessor.beanPostprocessor;
 
 
-import com.spring.learning.bean.postprocessor.beanPostprocessor.RohanBean;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -9,8 +8,9 @@ import org.springframework.context.ApplicationContext;
 @SpringBootApplication
 public class PostProcessorStarter {
     public static void main(String[] args) {
-         SpringApplication.run(PostProcessorStarter.class);
+        ApplicationContext context = SpringApplication.run(PostProcessorStarter.class);
 
-
+        RohanBean bean4 = context.getBean(RohanBean.class);
+        System.out.println(bean4.hashCode());
     }
 }
