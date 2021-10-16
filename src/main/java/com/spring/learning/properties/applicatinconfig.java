@@ -15,7 +15,7 @@ import org.springframework.context.annotation.PropertySources;
 })
 public class applicatinconfig {
     @Bean
-    public RestConnect restConnect(@Value( "${app1.url}") final String Url,@Value( "${app1.password}") final String pswd){
-        return new RestConnect(Url,pswd);
+    public RestConnect restConnect(@Value( "${app1.url}") final String Url,@Value( "${app1.password}") final String pswd,@Value( "${app1.sql.name}") final String sql){
+        return new RestConnect(Url,pswd,sql);
     }
 }
