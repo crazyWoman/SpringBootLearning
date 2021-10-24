@@ -11,8 +11,7 @@ public class AppConfig {
         return new AlbertBean();
     }
 
-    @Bean(initMethod = "initRhea", destroyMethod = "shutdownRhea")
-
+   @Bean(initMethod = "initRhea", destroyMethod = "shutdownRhea")
     public RheaBean rheaBean(){
         return new RheaBean();
     }

@@ -8,7 +8,6 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 @Component
-@Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
 public class SmithaBean {
 
     public SmithaBean() {

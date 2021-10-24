@@ -7,13 +7,18 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
+
 @Service
-public class RohanBean implements BeanPostProcessor, InitializingBean, DisposableBean {
-    @Override
+public class RohanBean implements DisposableBean { //, BeanPostProcessor, DisposableBean,InitializingBean {
+  /*  @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName)
             {
+
                 System.out.println("Hi I'm called before initilization");
-                System.out.println("bean name"+beanName);
+
+                    System.out.println("**********#######*******+"+bean.getClass());
+
+                System.out.println("bean name: "+beanName);
         return bean;
     }
 
@@ -22,10 +27,15 @@ public class RohanBean implements BeanPostProcessor, InitializingBean, Disposabl
             {
                 System.out.println("Hi I'm called after initilization");
         return bean;
-    }
+    }*/
 
     public RohanBean() {
         System.out.println("*******************rohan instance created");
+    }
+
+    @PreDestroy
+    private void shutdown() {
+        System.out.println("***************Shutdown All Resources");
     }
 
 
@@ -34,9 +44,10 @@ public class RohanBean implements BeanPostProcessor, InitializingBean, Disposabl
         System.out.println("*******************destroy");
     }
 
-    @Override
+
+   /* @Override
     public void afterPropertiesSet() throws Exception {
         System.out.println("*******************rafterPropertiesSet");
 
-    }
+    }*/
 }

@@ -11,12 +11,12 @@ public class AlbertBean {
 
     @PostConstruct
     private void init() {
-        System.out.println("****************Verifying Resources");
+        System.out.println("**************** Albert Verifying Resources");
     }
 
     @PreDestroy
     private void shutdown() {
-        System.out.println("***************Shutdown All Resources");
+        System.out.println("***************Albert Shutdown All Resources");
     }
 
 

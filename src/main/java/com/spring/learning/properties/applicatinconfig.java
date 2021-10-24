@@ -7,8 +7,8 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.annotation.PropertySources;
 
 @Configuration
-//@PropertySource("classpath:foo.properties")
-//@PropertySource("classpath:boo.properties")
+/*@PropertySource("classpath:foo.properties")
+@PropertySource("classpath:boo.properties")*/
 @PropertySources({
         @PropertySource("classpath:foo.properties"),
         @PropertySource("classpath:boo.properties")
