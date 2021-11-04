@@ -1,18 +1,20 @@
 package com.spring.learning.properties;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Employee {
-    @Autowired
-     MmmProperties mmmProperties;
+   /* @Autowired //setter
+     MmmProperties mmmProperties;*/
 
-public Employee(){
+    private final MmmProperties mmmProperties;
 
+    public Employee(MmmProperties mmmProperties) {
+        this.mmmProperties = mmmProperties;
+    }
 
-}
-public void get(){
+    public void get(){
+
     System.out.println(mmmProperties.getDaughter());
 }
 }
