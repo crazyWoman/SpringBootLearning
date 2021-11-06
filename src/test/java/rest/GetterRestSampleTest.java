@@ -43,4 +43,29 @@ class GetterRestSampleTest {
                 .andExpect(MockMvcResultMatchers.content().string("smitha"));
                 //"Expects that the content of the response is equal to smitha."
     }
+
+    @Test
+    public void employeeNameAndID() throws Exception {
+        mvc.perform(
+                //Performs a request to /employeeName with the Accept header value application/json.
+                MockMvcRequestBuilders.get("/employeeName/2")
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())// Expects that the status of the response is 200 (success).
+                .andExpect(MockMvcResultMatchers.content().string("albert"));
+                //"Expects that the content of the response is equal to smitha."
+    }
+    @Test
+    public void getEmployeeByIdAndReturnEmployee() throws Exception {
+        mvc.perform(
+                //Performs a request to /employeeName with the Accept header value application/json.
+                MockMvcRequestBuilders.get("/employee/2")
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())// Expects that the status of the response is 200 (success).
+                .andExpect(MockMvcResultMatchers.content().json("{\n" +
+                        "  \"employeeid\": 340,\n" +
+                        "  \"fname\": \"albert\",\n" +
+                        "  \"lname\": \"hernadez\"\n" +
+                        "}"));
+                //"Expects that the content of the response is equal to smitha."
+    }
 }
