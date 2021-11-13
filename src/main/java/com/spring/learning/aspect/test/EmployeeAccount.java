@@ -3,9 +3,10 @@ package com.spring.learning.aspect.test;
 import org.springframework.stereotype.Component;
 
 public class EmployeeAccount {
-
+//jointpoint
     public void calculateBonus(){
         System.out.println("bonus is "+2000);
+
     }
 
     public int calculateBonusAndSalary(){
