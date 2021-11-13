@@ -12,4 +12,9 @@ public class EmployeeAccount {
         System.out.println("calculateBonusAndSalary is "+2000);
         return 132000;
     }
+
+    public String getName(){
+        System.out.println("getName is "+"smitha");
+        return "smitha";
+    }
 }
