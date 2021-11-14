@@ -12,14 +12,15 @@ public class AspectStarter {
     public static void main(String[] args) {
     ApplicationContext context =  SpringApplication.run(AspectStarter.class);
         EmployeeAccount emp = context.getBean(EmployeeAccount.class);
-       emp.calculateBonusAndSalary();
-       emp.calculateBonus();
-       emp.getName();
-        Person person = context.getBean(Person.class);
+      /* emp.calculateBonusAndSalary();
+       emp.calculateBonus();*/
+      // emp.getName();
+       emp.getAge();
+       /* Person person = context.getBean(Person.class);
         person.isPersonActive();
 
         Employee employee = context.getBean(Employee.class);
-        employee.isEmployeeRetire();
+        employee.isEmployeeRetire();*/
 
     }
 }

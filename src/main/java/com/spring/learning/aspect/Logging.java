@@ -1,5 +1,6 @@
 package com.spring.learning.aspect;
 
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.*;
 
 import org.springframework.stereotype.Component;
@@ -24,6 +25,27 @@ public class Logging {
 
    /* @Pointcut("within(com.spring.learning.aspect.test.*)")
     private void select(){}*/
+/*
+    @AfterReturning(value="execution(* *..getName())",returning = "retVal")
+    public void afterReturnAdvice(Object retVal){
+        System.out.println("Going to afterReturnAdvice Employee Account."+retVal+"Meenekkodath");
+    }*/
+
+    @AfterReturning(value="execution(* *..getName())",returning="account")
+    public void afterReturningAdvice(JoinPoint joinPoint, String account)
+    {
+        System.out.println("After Returing method:"+joinPoint.getSignature());
+
+        System.out.println(account);
+    }
+
+    @AfterThrowing(value="execution(* *..getAge())",throwing="error")
+    public void afterThrowingAdvice(JoinPoint jp, Throwable error)
+    {
+        System.out.println("After Returing method:"+jp.getSignature());
+
+        System.out.println(error);
+    }
 
     @Before("selectBoth()")
     public void beforeAdvice(){

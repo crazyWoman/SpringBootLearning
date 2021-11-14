@@ -18,4 +18,8 @@ public class EmployeeAccount {
         System.out.println("getName is "+"smitha");
         return "smitha";
     }
+
+    public void  getAge(){
+       throw new NumberFormatException();
+    }
 }
